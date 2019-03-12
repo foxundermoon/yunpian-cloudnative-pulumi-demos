@@ -12,7 +12,7 @@
 
 每一个demo 的食用方式可以点下面链接
 
-- [k8s](./1-k8s)
+- [k8s](./1-k8s/kubernetes-ts-guestbook)
 - [azure](./2-azure)
 - [google cloud platform](./3-gcp)
 - [aws](./4/aws)

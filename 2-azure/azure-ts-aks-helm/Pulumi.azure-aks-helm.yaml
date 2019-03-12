@@ -1,0 +1,7 @@
+config:
+  azure-ts-aks-helm:location: West US 2
+  azure-ts-aks-helm:password:
+    secure: AAABADLK1ZSeYqsAtr2dIaAAfFteesdu8itGVMnT6G0w3+ZJ+lSXuvm5/PgMxBTpaC4Y+GsEURA=
+  azure-ts-aks-helm:sshPublicKey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDT2g9aXdIFpUD3sM2ibFASny/xox1OyuhB6NxLsXXrGvhJo9+wFCsEqrAWZGB3mIgLoaqSYEynuxxkon12xIuQilQXgr56vWmQF5QvLsaoYG+d/UpQrDABoK3aFbiYv2lwMAbQMFVM6s24l4ijATw1fARxiMr7PGa0W/P/SdccUawFDEausmECwLdAPd2T3U+kUm+nT5V0HhtLiiDT2qRx90NjvWDrcxN3D1oQcqNyOJBZTEYpJuYl0A56G01tl/TCOw+zX8yaCRkdiuUT5o6dQ/bfGK+tm8zr0IpDpSSpkEGHPcnK0oJKAJDBe/dGwtfWCfmNQZ+8eRCrZ2WUPp+t
+    fox@MacBook-Pro.local
+  azure:environment: public
