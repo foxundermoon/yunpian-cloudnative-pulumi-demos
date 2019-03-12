@@ -1,0 +1,2 @@
+config:
+  guestbook-easy:isMinikube: "true"

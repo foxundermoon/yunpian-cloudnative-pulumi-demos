@@ -20,8 +20,9 @@ npm install
 Create a new stack:
 
 ```sh
-$ pulumi stack init
-Enter a stack name: guestbook
+$ pulumi stack init k8s-guestbook-components
+
+Created stack 'k8s-guestbook-components'
 ```
 
 This example will attempt to expose the Guestbook application to the Internet with a `Service` of
@@ -36,48 +37,36 @@ pulumi config set isMinikube <value>
 Perform the deployment:
 
 ```sh
-$ pulumi up
-Previewing update (guestbook):
+$pulumi up       19:37   19-12-03  
+Previewing update (k8s-guestbook-components):
 
-     Type                                Name                      Plan       
- +   pulumi:pulumi:Stack                 guestbook-easy-guestbook  create     
- +   ├─ k8sjs:service:ServiceDeployment  frontend                  create     
- +   │  ├─ kubernetes:apps:Deployment    frontend                  create     
- +   │  └─ kubernetes:core:Service       frontend                  create     
- +   ├─ k8sjs:service:ServiceDeployment  redis-replica             create     
- +   │  ├─ kubernetes:apps:Deployment    redis-replica             create     
- +   │  └─ kubernetes:core:Service       redis-replica             create     
- +   └─ k8sjs:service:ServiceDeployment  redis-master              create     
- +      ├─ kubernetes:apps:Deployment    redis-master              create     
- +      └─ kubernetes:core:Service       redis-master              create     
- 
+     Type                                Name                                     Plan        Info
+     pulumi:pulumi:Stack                 guestbook-easy-k8s-guestbook-components
+     └─ k8sjs:service:ServiceDeployment  frontend
+ +-     └─ kubernetes:core:Service       frontend                                 replace     [diff: ~metadata,spec]
+
 Resources:
-    + 10 to create
+    +-1 to replace
+    9 unchanged
 
 Do you want to perform this update? yes
-Updating (guestbook):
+Updating (k8s-guestbook-components):
 
-     Type                                Name                      Status      
- +   pulumi:pulumi:Stack                 guestbook-easy-guestbook  created     
- +   ├─ k8sjs:service:ServiceDeployment  redis-master              created     
- +   │  ├─ kubernetes:apps:Deployment    redis-master              created     
- +   │  └─ kubernetes:core:Service       redis-master              created     
- +   ├─ k8sjs:service:ServiceDeployment  frontend                  created     
- +   │  ├─ kubernetes:apps:Deployment    frontend                  created     
- +   │  └─ kubernetes:core:Service       frontend                  created     
- +   └─ k8sjs:service:ServiceDeployment  redis-replica             created     
- +      ├─ kubernetes:apps:Deployment    redis-replica             created     
- +      └─ kubernetes:core:Service       redis-replica             created     
- 
+     Type                                Name                                     Status       Info
+     pulumi:pulumi:Stack                 guestbook-easy-k8s-guestbook-components
+     └─ k8sjs:service:ServiceDeployment  frontend
+ +-     └─ kubernetes:core:Service       frontend                                 replaced     [diff: ~metadata,spec]
+
 Outputs:
-    frontendIp: "10.105.48.30"
+  + frontendIp: "10.106.212.163"
 
 Resources:
-    + 10 created
+    +-1 replaced
+    9 unchanged
 
-Duration: 21s
+Duration: 16s
 
-Permalink: https://app.pulumi.com/acmecorp/k8sjs-guestbook/updates/1
+Permalink: https://app.pulumi.com/foxundermoon/guestbook-easy/k8s-guestbook-components/updates/2
 ```
 
 And finally - open the application in your browser to see the running application. If you're running
